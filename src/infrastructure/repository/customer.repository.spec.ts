@@ -108,7 +108,7 @@ describe('Customer repository test', () => {
     await customerRepository.create(customer1);
     await customerRepository.create(customer2);
 
-    const customers = await CustomerModel.findAll();
+    const customers = await customerRepository.findAll();
 
     expect(customers).toHaveLength(2);
     expect(customers).toContainEqual(customer1);

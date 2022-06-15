@@ -11,7 +11,7 @@ import OrderItemModel from './order-item.model';
 })
 export default class OrderModel extends Model {
   @PrimaryKey
-  @Column
+  @Column({ allowNull: false })
   declare id: string;
 
   @ForeignKey(() => CustomerModel)
